@@ -79,17 +79,11 @@ public class Wasser extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+                System.out.println(x);
+                //x=x+500;
 
 
-                if (x < 1000) {
-                    Toast.makeText(getApplicationContext(), R.string.Toast_su_1, Toast.LENGTH_LONG).show();
-                }
-                if (x > 5000) {
-                    Toast.makeText(getApplicationContext(), R.string.Toast_su_2, Toast.LENGTH_LONG).show();
-                } else {
-                    Toast.makeText(getApplicationContext(), R.string.Toast_su_3, Toast.LENGTH_LONG).show();
-                }
-                ekrangoster.setText(x + "");
+               
 
 
                 Toast.makeText(getApplicationContext(), R.string.Toast_su_kayit, Toast.LENGTH_LONG).show();
