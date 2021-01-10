@@ -180,7 +180,8 @@ public class Hedef_kalori extends AppCompatActivity {
                         textView.setText("Fazla kalori tüketimi, 1500 kalori ideal");
                         return;
                     }
-                } else if (60 >= a && a > 50 && c >= 140 && c <= 200) {
+                }
+                else if (60 >= a && a > 50 && c >= 140 && c <= 200) {
                     if (b >= 500 && b < 1000) {
                         TextView textView = (TextView) findViewById(R.id.textView);
                         textView.setText("Ek 1100 kaloriye ihtiyacınız var");
@@ -198,7 +199,8 @@ public class Hedef_kalori extends AppCompatActivity {
                         textView.setText("Fazla kalori tüketimi, 1700 kalori ideal");
                         return;
                     }
-                } else if (70 >= a && a > 60 && c >= 150 && c <= 210) {
+                }
+                else if (70 >= a && a > 60 && c >= 150 && c <= 210) {
                     if (b >= 500 && b < 1000) {
                         TextView textView = (TextView) findViewById(R.id.textView);
                         textView.setText("Ekstra 1200 kaloriye ihtiyacınız var");
@@ -216,7 +218,8 @@ public class Hedef_kalori extends AppCompatActivity {
                         textView.setText("Fazla kalori tüketimi,1800 kalori ideal");
                         return;
                     }
-                } else if (80 >= a && a > 70 && c >= 150 && c <= 220) {
+                }
+                else if (80 >= a && a > 70 && c >= 150 && c <= 220) {
                     if (b >= 500 && b < 1000) {
                         TextView textView = (TextView) findViewById(R.id.textView);
                         textView.setText("Ek 1300 kaloriye ihtiyacınız var");
@@ -234,7 +237,8 @@ public class Hedef_kalori extends AppCompatActivity {
                         textView.setText("Fazla kalori tüketimi,1900 kalori ideal");
                         return;
                     }
-                } else if (90 >= a && a > 80 && c >= 150 && c <= 230) {
+                }
+                else if (90 >= a && a > 80 && c >= 150 && c <= 230) {
                     if (b >= 500 && b < 1000) {
                         TextView textView = (TextView) findViewById(R.id.textView);
                         textView.setText("Ek 1450 kaloriye ihtiyacınız var");
@@ -252,7 +256,8 @@ public class Hedef_kalori extends AppCompatActivity {
                         textView.setText("Fazla kalori tüketimi,2000 kalori ideal");
                         return;
                     }
-                } else if (100 >= a && a > 90 && c >= 160 && c <= 230) {
+                }
+                else if (100 >= a && a > 90 && c >= 160 && c <= 230) {
                     if (b >= 500 && b < 1000) {
                         TextView textView = (TextView) findViewById(R.id.textView);
                         textView.setText("Ekstra 1600 kaloriye ihtiyacınız var");
@@ -270,7 +275,8 @@ public class Hedef_kalori extends AppCompatActivity {
                         textView.setText("Fazla kalori tüketimi,2200 kalori ideal");
                         return;
                     }
-                } else if (110 >= a && a > 100 && c >= 165 && c <= 230) {
+                }
+                else if (110 >= a && a > 100 && c >= 165 && c <= 230) {
                     if (b >= 500 && b < 1000) {
                         TextView textView = (TextView) findViewById(R.id.textView);
                         textView.setText("Ekstra 1800 kaloriye ihtiyacınız var");
@@ -288,21 +294,25 @@ public class Hedef_kalori extends AppCompatActivity {
                         textView.setText("Fazla kalori tüketimi,2300 kalori ideal");
                         return;
                     }
-                } else if (a > 110 && c >= 140 && c <= 230) {
+                }
+                else if (a > 110 && c >= 140 && c <= 230) {
                     TextView textView = (TextView) findViewById(R.id.textView);
                     textView.setText("Acil diyet!!");
                     return;
-                } else if (a < 40 && c >= 130 && c <= 220) {
+                }
+                else if (a < 40 && c >= 130 && c <= 220) {
                     TextView textView = (TextView) findViewById(R.id.textView);
                     textView.setText("Çok zayıfsınız,günlük 3000 kalori alın");
                     return;
-                } else {
+                }
+
+                else  {
                     TextView textView = (TextView) findViewById(R.id.textView);
                     textView.setText("Alanları boş bırakmayın");
                     return;
 
                 }
-            }
+                }
 
             private void toastMessage(String you_must_put_something) {
             }
