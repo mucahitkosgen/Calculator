@@ -20,7 +20,7 @@ import static android.content.ContentValues.TAG;
 
 public class Database_Yemek extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "yemek.db"; // Mücahit bunun ismini değiştereceksin.
+    public static final String DATABASE_NAME = "yemek.db"; 
     public static final String TABLE_NAME = "Yemek_table";
     public static final String COL_1 = "ID";
     public static final String COL_2 = "NAME";
@@ -213,7 +213,7 @@ public class Database_Yemek extends SQLiteOpenHelper {
 
     }
 
-    public void getData(String choosen) {
+    public void getData(String choosen) { // Kalorien von gesuchte Lebensmittel
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT KALORI FROM Yemek_table WHERE NAME=" + "'" + choosen + "'", null);
@@ -228,7 +228,7 @@ public class Database_Yemek extends SQLiteOpenHelper {
 
     }
 
-    public int getData2() {
+    public int getData2() { // Für zweite Table(Yemeklerim_table)
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT KALORI FROM Yemeklerim_table WHERE gun=" + "'" + getDateTime() + "'", null);
@@ -242,7 +242,7 @@ public class Database_Yemek extends SQLiteOpenHelper {
     }
 
 
-    public void addData2(int KALORI) {
+    public void addData2(int KALORI) { //Kalori hinzugefügt Table 2(Yemeklerim_table)
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT KALORI FROM Yemeklerim_table WHERE gun=" + getDateTime(), null);
@@ -276,7 +276,7 @@ public class Database_Yemek extends SQLiteOpenHelper {
     }
 
 
-    public void update(int KALORI) {//kayit güncelle metodu
+    public void update(int KALORI) {// data update function, neue kalorie hinzufügen
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -288,7 +288,7 @@ public class Database_Yemek extends SQLiteOpenHelper {
     }
 
 
-    public int getDateTime() {
+    public int getDateTime() {// neue Spalte herstellt für jdn Tag
 
         Calendar c = Calendar.getInstance();
 
