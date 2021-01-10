@@ -15,7 +15,7 @@ import java.util.List;
 
 public class yemeksecarayuz extends AppCompatActivity {
     public String choosen;
-    public String[] yemek = new String[1000];
+    public String[] yemek = new String[1000]; //Lebensmittel von SQL Table(Yemekler_table)
     public ImageView btn_onceki_sayfa;
     private AutoCompleteTextView yemek_ara;
     private ImageView btn_yemek_ekle;
