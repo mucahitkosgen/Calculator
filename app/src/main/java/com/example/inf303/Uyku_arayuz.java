@@ -33,7 +33,7 @@ public class Uyku_arayuz extends AppCompatActivity implements TimePickerDialog.O
         getDataCalistir();
 
 
-        btn_uyku_ekle.setOnClickListener(new View.OnClickListener() {
+        btn_uyku_ekle.setOnClickListener(new View.OnClickListener() {    // Saat seçim arayuzunu aciyoruz
             @Override
             public void onClick(View v) {
                 CharSequence saat = btn_uyku_ekle.getText();
@@ -44,7 +44,7 @@ public class Uyku_arayuz extends AppCompatActivity implements TimePickerDialog.O
         });
 
 
-        btn_anasayfa.setOnClickListener(new View.OnClickListener() {
+        btn_anasayfa.setOnClickListener(new View.OnClickListener() {   // btn_anasayfa butonuyla Hedef_kalori classina geciyoruz
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Hedef_kalori.class);
@@ -57,7 +57,7 @@ public class Uyku_arayuz extends AppCompatActivity implements TimePickerDialog.O
 
 
     @Override
-    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) { // Sectigimiz  hourOfDay ve minute degerlerini Textview'da gosteriyoruz.
 
         TextView saat = (TextView) findViewById(R.id.saat);
         TextView dakika = (TextView) findViewById(R.id.dakika);
@@ -73,7 +73,7 @@ public class Uyku_arayuz extends AppCompatActivity implements TimePickerDialog.O
     }
 
 
-    public void getDataCalistir() {
+    public void getDataCalistir() { // Textview saat ve dakika gozuken degerleri uygulamaya tekrar giris yaptigimiz da gormek icin
         TextView saat = (TextView) findViewById(R.id.saat);
         TextView dakika = (TextView) findViewById(R.id.dakika);
 
@@ -82,7 +82,7 @@ public class Uyku_arayuz extends AppCompatActivity implements TimePickerDialog.O
     }
 
 
-    public void addData(int hourOfDay, int minute) {
+    public void addData(int hourOfDay, int minute) { // hourOfDay ve minute degerlerini veritabanina ekliyoruz
 
         boolean insert;
         if (mDatabase.addData(hourOfDay, minute)) {
